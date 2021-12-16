@@ -20,6 +20,14 @@
 	padding: 0;
 	position: relative;
 	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.heroContentText {
+	text-align: left;
 }
 
 .heroContent h1,
@@ -36,6 +44,9 @@
 
 .heroImg {
 	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .category {
@@ -67,4 +78,35 @@
 
 .category .categories .categoryItem .categoryImage {
 	border-radius: 50% 50%;
+}
+
+.testimonialSection {
+	margin-top: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #edf2f6;
+}
+
+.testimonialSection .testimonials {
+	padding: 10px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1rem;
+}
+
+.testimonialSection .testimonials .testimonialItem {
+	background-color: #fff;
+	width: 100%;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+		6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+		12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+		22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+		41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+		100px 100px 80px rgba(0, 0, 0, 0.07);
 }

@@ -16,11 +16,13 @@ export default function Home() {
 			<div className={styles.Container}>
 				<div className={styles.hero}>
 					<div className={styles.heroContent}>
-						<h1>Refactored Waffles</h1>
-						<p>
-							Get your waffles refactored,
-							<br /> The way you love it.
-						</p>
+						<div className={styles.heroContentText}>
+							<h1>Refactored Waffles</h1>
+							<p>
+								Get your waffles refactored,
+								<br /> The way you love it.
+							</p>
+						</div>
 					</div>
 					<div className={styles.heroImg}>
 						<Image src={HeroBG} alt='hero' height={520} width={500} priority />
@@ -68,6 +70,53 @@ export default function Home() {
 								width={200}
 							/>
 							<span>Sweet Potato Waffles</span>
+						</div>
+					</div>
+				</div>
+				<div className={styles.testimonialSection}>
+					<h1>What people say about us!</h1>
+					<div className={styles.testimonials}>
+						<div className={styles.testimonialItem}>
+							<p>
+								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+								Aliquip do eiusmod nulla sit.
+							</p>
+							<span>-Pranjal Jain</span>
+						</div>
+						<div className={styles.testimonialItem}>
+							<p>
+								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+								Aliquip do eiusmod nulla sit.
+							</p>
+							<span>-Pranjal Jain</span>
+						</div>
+						<div className={styles.testimonialItem}>
+							<p>
+								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+								Aliquip do eiusmod nulla sit.
+							</p>
+							<span>-Pranjal Jain</span>
+						</div>
+						<div className={styles.testimonialItem}>
+							<p>
+								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+								Aliquip do eiusmod nulla sit.
+							</p>
+							<span>-Pranjal Jain</span>
+						</div>
+						<div className={styles.testimonialItem}>
+							<p>
+								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+								Aliquip do eiusmod nulla sit.
+							</p>
+							<span>-Pranjal Jain</span>
+						</div>
+						<div className={styles.testimonialItem}>
+							<p>
+								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+								Aliquip do eiusmod nulla sit.
+							</p>
+							<span>-Pranjal Jain</span>
 						</div>
 					</div>
 				</div>
