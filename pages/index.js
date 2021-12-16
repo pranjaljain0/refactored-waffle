@@ -18,19 +18,12 @@ export default function Home() {
 					<div className={styles.heroContent}>
 						<h1>Refactored Waffles</h1>
 						<p>
-							Get your waffles reafactored,
+							Get your waffles refactored,
 							<br /> The way you love it.
 						</p>
 					</div>
 					<div className={styles.heroImg}>
-						<Image
-							src={HeroBG}
-							alt='hero'
-							height={520}
-							width={500}
-							priority
-							layout='responsive'
-						/>
+						<Image src={HeroBG} alt='hero' height={520} width={500} priority />
 					</div>
 				</div>
 				<div className={styles.category}>
@@ -43,7 +36,6 @@ export default function Home() {
 								alt='Belgium Waffle'
 								height={200}
 								width={200}
-								layout='responsive'
 							/>
 							<span>Belgium Waffle</span>
 						</div>
@@ -54,7 +46,6 @@ export default function Home() {
 								alt='Belgium Waffle'
 								height={200}
 								width={200}
-								layout='responsive'
 							/>
 							<span>Toaster Waffle</span>
 						</div>
@@ -65,7 +56,6 @@ export default function Home() {
 								alt='Belgium Waffle'
 								height={200}
 								width={200}
-								layout='responsive'
 							/>
 							<span>Cinnamon Roll Waffles</span>
 						</div>
@@ -76,7 +66,6 @@ export default function Home() {
 								alt='Belgium Waffle'
 								height={200}
 								width={200}
-								layout='responsive'
 							/>
 							<span>Sweet Potato Waffles</span>
 						</div>
