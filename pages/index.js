@@ -23,7 +23,14 @@ export default function Home() {
 						</p>
 					</div>
 					<div className={styles.heroImg}>
-						<Image src={HeroBG} alt='hero' height={520} width={500} />
+						<Image
+							src={HeroBG}
+							alt='hero'
+							height={520}
+							width={500}
+							priority
+							layout='responsive'
+						/>
 					</div>
 				</div>
 				<div className={styles.category}>
@@ -36,6 +43,7 @@ export default function Home() {
 								alt='Belgium Waffle'
 								height={200}
 								width={200}
+								layout='responsive'
 							/>
 							<span>Belgium Waffle</span>
 						</div>
@@ -46,6 +54,7 @@ export default function Home() {
 								alt='Belgium Waffle'
 								height={200}
 								width={200}
+								layout='responsive'
 							/>
 							<span>Toaster Waffle</span>
 						</div>
@@ -56,6 +65,7 @@ export default function Home() {
 								alt='Belgium Waffle'
 								height={200}
 								width={200}
+								layout='responsive'
 							/>
 							<span>Cinnamon Roll Waffles</span>
 						</div>
@@ -66,6 +76,7 @@ export default function Home() {
 								alt='Belgium Waffle'
 								height={200}
 								width={200}
+								layout='responsive'
 							/>
 							<span>Sweet Potato Waffles</span>
 						</div>
