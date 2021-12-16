@@ -60,6 +60,11 @@
 	flex-direction: column;
 }
 
+.category .categories .categoryItem span {
+	margin-top: 20px;
+	font-size: 1.4rem;
+}
+
 .category .categories .categoryItem .categoryImage {
 	border-radius: 50% 50%;
 }
