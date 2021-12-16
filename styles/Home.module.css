@@ -2,4 +2,64 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+}
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	height: 600px;
+	width: 100%;
+	background-image: linear-gradient(to top, #fff 0%, #cfd9df 100%);
+}
+
+.heroContent {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	flex: 1;
+}
+
+.heroContent h1,
+.heroContent p {
+	font-size: 2.5rem;
+	margin: 0;
+	padding: 0;
+}
+
+.heroContent p {
+	font-size: 1.3rem;
+	color: #5a5a5a;
+}
+
+.heroImg {
+	flex: 1;
+}
+
+.category {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.category .categories {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.category .categories .categoryItem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.category .categories .categoryItem .categoryImage {
+	border-radius: 50% 50%;
 }
