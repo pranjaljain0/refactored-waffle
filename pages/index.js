@@ -81,42 +81,42 @@ export default function Home() {
 								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
 								Aliquip do eiusmod nulla sit.
 							</p>
-							<span>-Pranjal Jain</span>
+							<span>Pranjal Jain</span>
 						</div>
 						<div className={styles.testimonialItem}>
 							<p>
 								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
 								Aliquip do eiusmod nulla sit.
 							</p>
-							<span>-Pranjal Jain</span>
+							<span>Pranjal Jain</span>
 						</div>
 						<div className={styles.testimonialItem}>
 							<p>
 								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
 								Aliquip do eiusmod nulla sit.
 							</p>
-							<span>-Pranjal Jain</span>
+							<span>Pranjal Jain</span>
 						</div>
 						<div className={styles.testimonialItem}>
 							<p>
 								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
 								Aliquip do eiusmod nulla sit.
 							</p>
-							<span>-Pranjal Jain</span>
+							<span>Pranjal Jain</span>
 						</div>
 						<div className={styles.testimonialItem}>
 							<p>
 								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
 								Aliquip do eiusmod nulla sit.
 							</p>
-							<span>-Pranjal Jain</span>
+							<span>Pranjal Jain</span>
 						</div>
 						<div className={styles.testimonialItem}>
 							<p>
 								Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
 								Aliquip do eiusmod nulla sit.
 							</p>
-							<span>-Pranjal Jain</span>
+							<span>Pranjal Jain</span>
 						</div>
 					</div>
 				</div>
