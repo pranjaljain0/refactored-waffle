@@ -7,9 +7,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PotatoWaffle from '../public/PotatoWaffle.jpeg';
 import ToasterWaffles from '../public/ToasterWaffle.png';
+import { getTopWaffles } from '../server/api';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+	console.log(getTopWaffles);
 	return (
 		<>
 			<Head>
@@ -41,7 +43,10 @@ export default function Home() {
 								height={200}
 								width={200}
 							/>
-							<span>Belgium Waffle</span>
+							<span>
+								Belgium Waffle
+								<BsArrowRight className={styles.arrowRight} />
+							</span>
 						</div>
 						<div className={styles.categoryItem}>
 							<Image
@@ -51,7 +56,10 @@ export default function Home() {
 								height={200}
 								width={200}
 							/>
-							<span>Toaster Waffle</span>
+							<span>
+								Toaster Waffle
+								<BsArrowRight className={styles.arrowRight} />
+							</span>
 						</div>
 						<div className={styles.categoryItem}>
 							<Image
@@ -61,7 +69,10 @@ export default function Home() {
 								height={200}
 								width={200}
 							/>
-							<span>Cinnamon Roll Waffles</span>
+							<span>
+								Cinnamon Roll Waffles
+								<BsArrowRight className={styles.arrowRight} />
+							</span>
 						</div>
 						<div className={styles.categoryItem}>
 							<Image
@@ -71,7 +82,10 @@ export default function Home() {
 								height={200}
 								width={200}
 							/>
-							<span>Sweet Potato Waffles</span>
+							<span>
+								Sweet Potato Waffles
+								<BsArrowRight className={styles.arrowRight} />
+							</span>
 						</div>
 					</div>
 				</div>
@@ -137,6 +151,9 @@ export default function Home() {
 									/>
 									<div>
 										<p>PotatoWaffle</p>
+										<p>
+											Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+										</p>
 										<span>
 											Get this
 											<BsArrowRight className={styles.arrowRight} />
@@ -157,6 +174,9 @@ export default function Home() {
 									/>
 									<div>
 										<p>PotatoWaffle</p>
+										<p>
+											Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+										</p>
 										<span>
 											Get this
 											<BsArrowRight className={styles.arrowRight} />
@@ -177,6 +197,9 @@ export default function Home() {
 									/>
 									<div>
 										<p>PotatoWaffle</p>
+										<p>
+											Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+										</p>
 										<span>
 											Get this
 											<BsArrowRight className={styles.arrowRight} />
@@ -197,6 +220,9 @@ export default function Home() {
 									/>
 									<div>
 										<p>PotatoWaffle</p>
+										<p>
+											Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+										</p>
 										<span>
 											Get this
 											<BsArrowRight className={styles.arrowRight} />
@@ -211,3 +237,5 @@ export default function Home() {
 		</>
 	);
 }
+
+const getStaticProps = () => {};
