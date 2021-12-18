@@ -1,8 +1,10 @@
 import BelgianWaffles from '../public/BelgianWaffles.jpeg';
+import { BsArrowRight } from 'react-icons/bs';
 import CinnamonRollWaffle from '../public/CinnamonRollWaffle.jpeg';
 import Head from 'next/head';
 import HeroBG from '../public/hero_bg.png';
 import Image from 'next/image';
+import Link from 'next/link';
 import PotatoWaffle from '../public/PotatoWaffle.jpeg';
 import ToasterWaffles from '../public/ToasterWaffle.png';
 import styles from '../styles/Home.module.css';
@@ -118,6 +120,91 @@ export default function Home() {
 							</p>
 							<span>Pranjal Jain</span>
 						</div>
+					</div>
+				</div>
+				<div className={styles.topProductsContainer}>
+					<h1>Our suggestions</h1>
+					<div className={styles.topProductList}>
+						<Link href='/' passHref>
+							<a href='/'>
+								<div className={styles.topProductItem}>
+									<Image
+										className={styles.topProductImage}
+										src={PotatoWaffle}
+										alt='Belgium Waffle'
+										height={150}
+										width={150}
+									/>
+									<div>
+										<p>PotatoWaffle</p>
+										<span>
+											Get this
+											<BsArrowRight className={styles.arrowRight} />
+										</span>
+									</div>
+								</div>
+							</a>
+						</Link>
+						<Link href='/' passHref>
+							<a href='/'>
+								<div className={styles.topProductItem}>
+									<Image
+										className={styles.topProductImage}
+										src={PotatoWaffle}
+										alt='Belgium Waffle'
+										height={150}
+										width={150}
+									/>
+									<div>
+										<p>PotatoWaffle</p>
+										<span>
+											Get this
+											<BsArrowRight className={styles.arrowRight} />
+										</span>
+									</div>
+								</div>
+							</a>
+						</Link>
+						<Link href='/' passHref>
+							<a href='/'>
+								<div className={styles.topProductItem}>
+									<Image
+										className={styles.topProductImage}
+										src={PotatoWaffle}
+										alt='Belgium Waffle'
+										height={150}
+										width={150}
+									/>
+									<div>
+										<p>PotatoWaffle</p>
+										<span>
+											Get this
+											<BsArrowRight className={styles.arrowRight} />
+										</span>
+									</div>
+								</div>
+							</a>
+						</Link>
+						<Link href='/' passHref>
+							<a href='/'>
+								<div className={styles.topProductItem}>
+									<Image
+										className={styles.topProductImage}
+										src={PotatoWaffle}
+										alt='Belgium Waffle'
+										height={150}
+										width={150}
+									/>
+									<div>
+										<p>PotatoWaffle</p>
+										<span>
+											Get this
+											<BsArrowRight className={styles.arrowRight} />
+										</span>
+									</div>
+								</div>
+							</a>
+						</Link>
 					</div>
 				</div>
 			</div>
