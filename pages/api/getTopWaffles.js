@@ -7,7 +7,6 @@ const handler = async (req, res) => {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	});
-	console.log(process.env.NODE_ENV);
 
 	client.connect((err) => {
 		client
@@ -15,9 +14,10 @@ const handler = async (req, res) => {
 			.collection('AllWaffles')
 			.find({})
 			.toArray(function (err, result) {
-				res.status(200).json({ result });
+				res.status(200).json(result);
 			});
 	});
+	// res.status(200).json(obj);
 
 	client.close();
 };
