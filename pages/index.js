@@ -12,6 +12,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
 	console.log(getTopWaffles);
+	console.log(process.env.USERNAME);
 	console.log(process.env.NODE_ENV);
 	return (
 		<>
