@@ -141,96 +141,88 @@ export default function Home() {
 					<h1>Our suggestions</h1>
 					<div className={styles.topProductList}>
 						<Link href='/' passHref>
-							<a href='/'>
-								<div className={styles.topProductItem}>
-									<Image
-										className={styles.topProductImage}
-										src={PotatoWaffle}
-										alt='Belgium Waffle'
-										height={150}
-										width={150}
-									/>
-									<div>
-										<p>PotatoWaffle</p>
-										<p>
-											Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
-										</p>
-										<span>
-											Get this
-											<BsArrowRight className={styles.arrowRight} />
-										</span>
-									</div>
+							<div className={styles.topProductItem}>
+								<Image
+									className={styles.topProductImage}
+									src={PotatoWaffle}
+									alt='Belgium Waffle'
+									height={150}
+									width={150}
+								/>
+								<div>
+									<p>PotatoWaffle</p>
+									<p>
+										Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+									</p>
+									<span>
+										Get this
+										<BsArrowRight className={styles.arrowRight} />
+									</span>
 								</div>
-							</a>
+							</div>
 						</Link>
 						<Link href='/' passHref>
-							<a href='/'>
-								<div className={styles.topProductItem}>
-									<Image
-										className={styles.topProductImage}
-										src={PotatoWaffle}
-										alt='Belgium Waffle'
-										height={150}
-										width={150}
-									/>
-									<div>
-										<p>PotatoWaffle</p>
-										<p>
-											Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
-										</p>
-										<span>
-											Get this
-											<BsArrowRight className={styles.arrowRight} />
-										</span>
-									</div>
+							<div className={styles.topProductItem}>
+								<Image
+									className={styles.topProductImage}
+									src={PotatoWaffle}
+									alt='Belgium Waffle'
+									height={150}
+									width={150}
+								/>
+								<div>
+									<p>PotatoWaffle</p>
+									<p>
+										Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+									</p>
+									<span>
+										Get this
+										<BsArrowRight className={styles.arrowRight} />
+									</span>
 								</div>
-							</a>
+							</div>
 						</Link>
 						<Link href='/' passHref>
-							<a href='/'>
-								<div className={styles.topProductItem}>
-									<Image
-										className={styles.topProductImage}
-										src={PotatoWaffle}
-										alt='Belgium Waffle'
-										height={150}
-										width={150}
-									/>
-									<div>
-										<p>PotatoWaffle</p>
-										<p>
-											Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
-										</p>
-										<span>
-											Get this
-											<BsArrowRight className={styles.arrowRight} />
-										</span>
-									</div>
+							<div className={styles.topProductItem}>
+								<Image
+									className={styles.topProductImage}
+									src={PotatoWaffle}
+									alt='Belgium Waffle'
+									height={150}
+									width={150}
+								/>
+								<div>
+									<p>PotatoWaffle</p>
+									<p>
+										Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+									</p>
+									<span>
+										Get this
+										<BsArrowRight className={styles.arrowRight} />
+									</span>
 								</div>
-							</a>
+							</div>
 						</Link>
 						<Link href='/' passHref>
-							<a href='/'>
-								<div className={styles.topProductItem}>
-									<Image
-										className={styles.topProductImage}
-										src={PotatoWaffle}
-										alt='Belgium Waffle'
-										height={150}
-										width={150}
-									/>
-									<div>
-										<p>PotatoWaffle</p>
-										<p>
-											Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
-										</p>
-										<span>
-											Get this
-											<BsArrowRight className={styles.arrowRight} />
-										</span>
-									</div>
+							<div className={styles.topProductItem}>
+								<Image
+									className={styles.topProductImage}
+									src={PotatoWaffle}
+									alt='Belgium Waffle'
+									height={150}
+									width={150}
+								/>
+								<div>
+									<p>PotatoWaffle</p>
+									<p>
+										Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
+									</p>
+									<span>
+										Get this
+										<BsArrowRight className={styles.arrowRight} />
+									</span>
 								</div>
-							</a>
+							</div>
 						</Link>
 					</div>
 				</div>
