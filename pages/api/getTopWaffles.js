@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 
 const handler = async (req, res) => {
 	const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTURE}.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
-
+	console.log(process.env.USERNAME);
 	const client = new MongoClient(uri, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
