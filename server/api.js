@@ -1,5 +1,5 @@
 let url =
-	process.env.NODE_ENV !== 'dev'
+	process.env.NODE_ENV === 'development'
 		? 'localhost:3000/'
 		: 'https://rafactoredwaffle.pranjaljain.me/';
 
