@@ -12,7 +12,6 @@ const handler = async (req, res) => {
 
 	const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTURE}.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
 	console.log(uri);
-
 	let promise = null;
 	promise = MongoClient.connect(uri, {
 		useNewUrlParser: true,
