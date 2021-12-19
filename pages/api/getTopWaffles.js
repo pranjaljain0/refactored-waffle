@@ -11,9 +11,8 @@ const handler = async (req, res) => {
 		throw new Error('Missing environment variable DATABASE');
 
 	const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTURE}.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
-	console.log(uri);
-	let promise = null;
-	promise = MongoClient.connect(uri, {
+
+	let promise = MongoClient.connect(uri, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	});
