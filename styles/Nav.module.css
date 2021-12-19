@@ -5,6 +5,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 40px;
+	white-space: nowrap;
 }
 
 .nav ul {
@@ -71,4 +72,14 @@
 
 .searchInput input[type='search']:focus {
 	background-color: rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-width: 480px) {
+	.midSection {
+		display: none !important;
+	}
+
+	.rightSection {
+		display: none !important;
+	}
 }

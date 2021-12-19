@@ -58,9 +58,9 @@
 }
 
 .category .categories {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
 	width: 100%;
 }
 
@@ -198,4 +198,32 @@
 	justify-content: flex-start;
 	align-items: center;
 	margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+	.hero {
+		flex-direction: column;
+		height: 100vh;
+	}
+
+	.heroContent {
+		justify-content: flex-start;
+		flex: 0;
+	}
+
+	.testimonialSection .testimonials {
+		grid-template-columns: 1fr;
+	}
+
+	.topProductList {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+		width: 100%;
+	}
+
+	.category .categories {
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+	}
 }
