@@ -7,12 +7,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PotatoWaffle from '../public/PotatoWaffle.jpeg';
 import ToasterWaffles from '../public/ToasterWaffle.png';
+import TopWaffle from '../components/Home/TopWaffle';
 import { getTopWaffles } from '../server/api';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
-	console.log(process.env.USERNAME);
-
+export default function Home({ topWaffles }) {
 	return (
 		<>
 			<Head>
@@ -140,90 +139,9 @@ export default function Home() {
 				<div className={styles.topProductsContainer}>
 					<h1>Our suggestions</h1>
 					<div className={styles.topProductList}>
-						<Link href='/' passHref>
-							<div className={styles.topProductItem}>
-								<Image
-									className={styles.topProductImage}
-									src={PotatoWaffle}
-									alt='Belgium Waffle'
-									height={150}
-									width={150}
-								/>
-								<div>
-									<p>PotatoWaffle</p>
-									<p>
-										Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
-									</p>
-									<span>
-										Get this
-										<BsArrowRight className={styles.arrowRight} />
-									</span>
-								</div>
-							</div>
-						</Link>
-						<Link href='/' passHref>
-							<div className={styles.topProductItem}>
-								<Image
-									className={styles.topProductImage}
-									src={PotatoWaffle}
-									alt='Belgium Waffle'
-									height={150}
-									width={150}
-								/>
-								<div>
-									<p>PotatoWaffle</p>
-									<p>
-										Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
-									</p>
-									<span>
-										Get this
-										<BsArrowRight className={styles.arrowRight} />
-									</span>
-								</div>
-							</div>
-						</Link>
-						<Link href='/' passHref>
-							<div className={styles.topProductItem}>
-								<Image
-									className={styles.topProductImage}
-									src={PotatoWaffle}
-									alt='Belgium Waffle'
-									height={150}
-									width={150}
-								/>
-								<div>
-									<p>PotatoWaffle</p>
-									<p>
-										Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
-									</p>
-									<span>
-										Get this
-										<BsArrowRight className={styles.arrowRight} />
-									</span>
-								</div>
-							</div>
-						</Link>
-						<Link href='/' passHref>
-							<div className={styles.topProductItem}>
-								<Image
-									className={styles.topProductImage}
-									src={PotatoWaffle}
-									alt='Belgium Waffle'
-									height={150}
-									width={150}
-								/>
-								<div>
-									<p>PotatoWaffle</p>
-									<p>
-										Velit in pariatur culpa Lorem sunt anim ea aliquip mollit.
-									</p>
-									<span>
-										Get this
-										<BsArrowRight className={styles.arrowRight} />
-									</span>
-								</div>
-							</div>
-						</Link>
+						{topWaffles.map((item, index) => (
+							<TopWaffle WaffleDetail={item} key={index} />
+						))}
 					</div>
 				</div>
 			</div>
@@ -231,4 +149,11 @@ export default function Home() {
 	);
 }
 
-const getStaticProps = () => {};
+export async function getStaticProps(context) {
+	const res = await fetch(getTopWaffles);
+	const topWaffles = await res.json();
+
+	return {
+		props: { topWaffles },
+	};
+}

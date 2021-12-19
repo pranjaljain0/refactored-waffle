@@ -17,8 +17,9 @@ const handler = async (req, res) => {
 		useUnifiedTopology: true,
 	})
 		.then((client) => {
-			let db = client.db('Waffles');
-			db.collection('AllWaffles')
+			client
+				.db('Waffles')
+				.collection('AllWaffles')
 				.find({})
 				.toArray((err, results) => {
 					res.status(200).json(results);
