@@ -18,7 +18,7 @@ const TopWaffle = ({ WaffleDetail }) => {
 					<p>{WaffleDetail.name}</p>
 					<p>{WaffleDetail.mini_description}</p>
 					<span>
-						Get this
+						Get this for <span>${WaffleDetail.price}</span>
 						<BsArrowRight className={styles.arrowRight} />
 					</span>
 				</div>

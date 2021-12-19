@@ -180,7 +180,7 @@
 
 .topProductItem p:first-child {
 	color: #000;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	margin: 0;
 	padding: 0;
 }
@@ -188,7 +188,7 @@
 .topProductItem p {
 	color: #5a5a5a;
 	font-size: 0.8rem;
-	margin: 0;
+	margin: 4px 0;
 	padding: 0;
 }
 
@@ -198,6 +198,16 @@
 	justify-content: flex-start;
 	align-items: center;
 	margin: 0;
+}
+
+.topProductItem span span {
+	font-size: 1rem;
+	margin-left: 8px;
+	background-color: #464545;
+	color: #1f1f1f;
+	padding: 0 6px;
+	border-radius: 8px;
+	color: #fff;
 }
 
 @media only screen and (max-width: 480px) {
