@@ -12,12 +12,10 @@ const handler = async (req, res) => {
 
 	const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTURE}.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
 
-	let promise = MongoClient.connect(uri, {
+	MongoClient.connect(uri, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
-	});
-
-	promise
+	})
 		.then((client) => {
 			let db = client.db('Waffles');
 			db.collection('AllWaffles')
@@ -27,7 +25,7 @@ const handler = async (req, res) => {
 				});
 		})
 		.catch((error) => {
-			res.status(500).json({ status: 'ERROR' });
+			res.status(500).json({ status: 'ERROR', err: error });
 			console.log(error);
 		});
 };
