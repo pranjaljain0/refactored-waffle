@@ -11,23 +11,29 @@ const handler = async (req, res) => {
 		throw new Error('Missing environment variable DATABASE');
 
 	const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTURE}.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
-	const client = new MongoClient(uri, {
+
+	let promise = null;
+	promise = MongoClient.connect(uri, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	});
 
-	client.connect((err) => {
-		client
-			.db('Waffles')
-			.collection('AllWaffles')
-			.find({})
-			.toArray(function (err, result) {
-				res.status(200).json(result);
-			});
-	});
-	// res.status(200).json(obj);
-
-	client.close();
+	promise
+		.then((client) => {
+			let db = client.db('Waffles');
+			db.collection('AllWaffles')
+				.find({})
+				.toArray((err, results) => {
+					res.status(200).json(results);
+				});
+		})
+		.catch((error) => {
+			res.status(500).json({ status: 'ERROR' });
+			console.log(error);
+		})
+		.finally((e) => {
+			promise.close();
+		});
 };
 
 export default handler;
