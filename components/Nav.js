@@ -1,10 +1,11 @@
 import { BsChevronRight } from 'react-icons/bs';
+import { FiShoppingCart } from 'react-icons/fi';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../public/logo.png';
 import styles from '../styles/Nav.module.css';
 
-const Nav = () => {
+const Nav = ({ showCart, setShowCart }) => {
 	return (
 		<div className={styles.nav}>
 			<ul className={styles.leftSection}>
@@ -32,7 +33,10 @@ const Nav = () => {
 			</ul>
 			<ul className={styles.rightSection}>
 				<li>
-					<span>Login/Sign up</span>
+					<FiShoppingCart
+						className={styles.CartIcon}
+						onClick={() => setShowCart(!showCart)}
+					/>
 				</li>
 			</ul>
 		</div>

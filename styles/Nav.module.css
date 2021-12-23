@@ -20,6 +20,12 @@
 	justify-content: flex-start;
 }
 
+.leftSection li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .midSection {
 	justify-content: center;
 }
@@ -27,6 +33,35 @@
 .rightSection {
 	justify-content: flex-end;
 	margin-right: 40px;
+}
+
+.rightSection li {
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 50px;
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50% 50%;
+	position: relative;
+	transition: all 0.2s ease-in;
+	cursor: pointer;
+}
+
+.rightSection li:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.rightSection li:focus {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.CartIcon {
+	font-size: 1.5rem;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
 }
 
 .nav ul li {
@@ -79,7 +114,9 @@
 		display: none !important;
 	}
 
-	.rightSection {
-		display: none !important;
+	.rightSection li {
+		background-color: rgba(0, 0, 0, 0.4);
+		height: 40px;
+		width: 40px;
 	}
 }

@@ -139,9 +139,15 @@ export default function Home({ topWaffles }) {
 				<div className={styles.topProductsContainer}>
 					<h1>Our suggestions</h1>
 					<div className={styles.topProductList}>
-						{topWaffles.map((item, index) => (
-							<TopWaffle WaffleDetail={item} key={index} />
-						))}
+						{topWaffles
+							.sort((a, b) => {
+								if (a.name > b.name) return 1;
+								if (a.name < b.name) return -1;
+								return 0;
+							})
+							.map((item, index) => (
+								<TopWaffle WaffleDetail={item} key={index} />
+							))}
 					</div>
 				</div>
 			</div>

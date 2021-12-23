@@ -1,0 +1,113 @@
+.CartHidden {
+	right: -100%;
+}
+
+.CartShow {
+	right: 0;
+}
+
+.Cart {
+	position: fixed;
+	top: 0;
+	width: 400px;
+	height: 100%;
+	z-index: 100;
+	background-color: #fff;
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.CartHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	width: 100%;
+}
+
+.CartHeader h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.CartHeader span {
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 30px;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50% 50%;
+	transition: all 0.2s ease-in;
+	cursor: pointer;
+}
+
+.CartHeader span:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.CartHeader .CloseIcon {
+	font-size: 1.3em;
+}
+
+.CartItemList {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	overflow-x: scroll;
+}
+
+.CartItem {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.1);
+	margin: 8px;
+	padding: 10px 20px;
+	border-radius: 8px;
+	width: 100%;
+}
+
+.CartItem .CartItemImage {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.CartItem .CartItemDetails {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 0 10px;
+}
+
+.NoItemMsg {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #555555;
+	font-size: 1.2em;
+}
+
+.QtyIconsContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.QtyIconsContainer .QtyIcons {
+	margin: 0 10px;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.2);
+	font-size: 1.2rem;
+	border-radius: 50% 50%;
+}
