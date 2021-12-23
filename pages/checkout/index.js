@@ -24,6 +24,19 @@ const index = () => {
 		setPostData({ ...postData, [e.target.name]: e.target.value });
 	};
 
+	const countTotal = () => {
+		let count = 0;
+		cartState.forEach((item, index) => {
+			count = count + item.price * item.qty;
+		});
+		return count;
+	};
+
+	const countTax = () => {
+		let total = countTotal();
+		return (total * 7.5) / 100;
+	};
+
 	return (
 		<div className={styles.checkoutContainer}>
 			<h1>Checkout</h1>
@@ -32,6 +45,14 @@ const index = () => {
 					{cartState.map((item, index) => {
 						return <CartItem key={index} item={item} />;
 					})}
+					<div className={styles.totalPrice}>
+						<span>Price total: {countTotal().toFixed(2)}</span>
+						<span>Added Tax(7.5%): {countTax().toFixed(2)}</span>
+						<span>
+							Total (with tax):{' '}
+							{+countTotal().toFixed(2) + +countTax().toFixed(2)}
+						</span>
+					</div>
 				</div>
 				<div className={styles.rightContainer}>
 					<form onSubmit={(e) => onSubmitHandler(e)}>
