@@ -1,11 +1,13 @@
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight, BsPatchCheck } from 'react-icons/bs';
+import { useContext, useState } from 'react';
+
 import Image from 'next/image';
 import { cartContext } from '../../context/state';
 import styles from '../../styles/Home.module.css';
-import { useContext } from 'react';
 
 const TopWaffle = ({ WaffleDetail }) => {
 	const { cartState, setCartState } = useContext(cartContext);
+	const [showAddedNotif, setShowAddedNotif] = useState(false);
 
 	const AddToCart = (waffleItem) => {
 		let ix = null;
@@ -19,6 +21,10 @@ const TopWaffle = ({ WaffleDetail }) => {
 		}
 
 		setCartState([...cartState]);
+		setShowAddedNotif(true);
+		setTimeout(() => {
+			setShowAddedNotif(false);
+		}, 3000);
 	};
 
 	return (
@@ -37,10 +43,17 @@ const TopWaffle = ({ WaffleDetail }) => {
 			<div>
 				<p>{WaffleDetail.name}</p>
 				<p>{WaffleDetail.mini_description}</p>
-				<span>
-					Add to cart <span>${WaffleDetail.price}</span>
-					<BsArrowRight className={styles.arrowRight} />
-				</span>
+				{!showAddedNotif ? (
+					<span>
+						Add to cart <span>${WaffleDetail.price}</span>
+						<BsArrowRight className={styles.arrowRight} />
+					</span>
+				) : (
+					<span>
+						Added to cart
+						<BsPatchCheck className={styles.CheckIcon} />
+					</span>
+				)}
 			</div>
 		</div>
 	);
