@@ -26,7 +26,20 @@
 .FooterContainer p {
 	position: absolute;
 	bottom: 10px;
-	font-size: 0.8rem;
+	text-align: center;
+	font-size: 0.9rem;
+	vertical-align: bottom;
+}
+
+.vercelLogo {
+}
+
+.portfolioLink {
+	text-decoration: underline;
+}
+
+.mongoLogo {
+	color: #4db33d;
 }
 
 @media only screen and (max-width: 480px) {

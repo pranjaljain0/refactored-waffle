@@ -1,4 +1,7 @@
+import { SiMongodb, SiVercel } from 'react-icons/si';
+
 import { FaQuoteLeft } from 'react-icons/fa';
+import Link from 'next/link';
 import styles from '../styles/Footer.module.css';
 
 const Footer = () => {
@@ -15,7 +18,15 @@ const Footer = () => {
 				between two plates that are patterned to give a characteristic size,
 				shape, and surface impression.
 			</span>
-			<p>Copyright &copy; {getFullYear()} Refactored Waffles</p>
+			<p>
+				Made with Next <SiVercel className={styles.vercelLogo} /> & MongoDB by{' '}
+				<SiMongodb className={styles.mongoLogo} />
+				<Link href='https://www.pranjaljain.me' passHref>
+					<a className={styles.portfolioLink}>Pranjal Jain</a>
+				</Link>
+				<br />
+				Copyright &copy; {getFullYear()} Refactored Waffles
+			</p>
 		</div>
 	);
 };
