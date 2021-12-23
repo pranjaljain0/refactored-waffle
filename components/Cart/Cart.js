@@ -1,7 +1,9 @@
 import { MdAdd, MdRemove } from 'react-icons/md';
 
+import CartItem from './CartItem';
 import { GrClose } from 'react-icons/gr';
 import Image from 'next/image';
+import Link from 'next/link';
 import { cartContext } from '../../context/state';
 import styles from '../../styles/Cart.module.css';
 import { useContext } from 'react';
@@ -49,40 +51,22 @@ const Cart = ({ showCart, setShowCart }) => {
 							return 0;
 						})
 						.map((item, index) => (
-							<div key={index} className={styles.CartItem}>
-								<Image
-									className={styles.CartItemImage}
-									src={item.image_url}
-									alt={item.name}
-									height={100}
-									width={100}
-								/>
-								<div className={styles.CartItemDetails}>
-									<span>{item.name}</span>
-									<span>{item.price}</span>
-									<div className={styles.QtyIconsContainer}>
-										<MdRemove
-											onClick={() => RemoveCartItem(item)}
-											className={`${styles.QtyIcons} ${
-												item.qty < 0 && styles.QtyIconsDisabled
-											}`}
-										/>
-										<span>{item.qty}</span>
-										<MdAdd
-											onClick={() => AddCartItem(item)}
-											className={`${styles.QtyIcons} ${
-												item.qty > 9 && styles.QtyIconsDisabled
-											}`}
-										/>
-									</div>
-								</div>
-							</div>
+							<CartItem item={item} key={index} />
 						))}
 				</div>
 			) : (
 				<span className={styles.NoItemMsg}>
 					There are no items in your cart.
 				</span>
+			)}
+			{cartItems.length !== 0 && (
+				<div
+					className={styles.checkoutButtonContainer}
+					onClick={() => setShowCart(false)}>
+					<Link href='/checkout' passHref>
+						<a className={`${styles.checkoutButton}`}>Checkout</a>
+					</Link>
+				</div>
 			)}
 		</div>
 	);
