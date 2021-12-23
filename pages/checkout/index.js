@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useContext, useState } from 'react';
 
 import CartItem from '../../components/Cart/CartItem';
