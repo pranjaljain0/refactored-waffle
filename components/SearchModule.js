@@ -28,7 +28,7 @@ const SearchModule = () => {
 					{searchResults !== null &&
 						searchResults.map((item, index) => {
 							return (
-								<li key={index}>
+								<li key={index} className={styles.searchResultItem}>
 									<Image
 										className={styles.searchResultImage}
 										src={item.image_url}
@@ -40,6 +40,11 @@ const SearchModule = () => {
 								</li>
 							);
 						})}
+					{searchResults !== null && searchResults.length === 0 && (
+						<li>
+							<span>No results found</span>
+						</li>
+					)}
 				</ul>
 			</div>
 		</ul>
