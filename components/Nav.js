@@ -18,7 +18,7 @@ const Nav = ({ showCart, setShowCart }) => {
 					</Link>
 				</li>
 				<li>
-					<Link href='/about'>About</Link>
+					<Link href='/waffles'>Waffles</Link>
 				</li>
 				<li>
 					<Link href='/contact'>Contact us</Link>

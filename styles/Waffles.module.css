@@ -1,0 +1,88 @@
+.Waffles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+}
+
+.WaffleList {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 350px 350px 350px;
+	grid-template-rows: auto;
+	gap: 10px;
+}
+
+.WaffleItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 400px;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.WaffleItemImage {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.WaffleItem div {
+	display: flex;
+	flex-direction: column;
+	max-width: 200px;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex: 1;
+}
+
+.addToCartButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #555;
+	color: #fff;
+	padding: 10px;
+	border-radius: 4px;
+	margin: 10px 0;
+	font-size: 0.8rem;
+	cursor: pointer;
+}
+
+.arrowRight {
+	margin-left: 10px;
+}
+
+.CheckIcon {
+	margin-left: 10px;
+	color: lightblue;
+}
+
+.MoreInfoButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: green;
+	color: #fff;
+	padding: 10px;
+	border-radius: 4px;
+	margin-top: 10px;
+	font-size: 0.8rem;
+	cursor: pointer;
+}
+
+.addedToCart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(110, 110, 110);
+	color: #fff;
+	padding: 10px;
+	border-radius: 4px;
+	margin: 10px 0;
+	font-size: 0.8rem;
+	cursor: pointer;
+}

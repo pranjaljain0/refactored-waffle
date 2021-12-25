@@ -33,60 +33,68 @@ export default function Home({ topWaffles }) {
 					</div>
 				</div>
 				<div className={styles.category}>
-					<h1>Categories</h1>
+					<h1>Our waffles</h1>
 					<div className={styles.categories}>
-						<div className={styles.categoryItem}>
-							<Image
-								className={styles.categoryImage}
-								src={BelgianWaffles}
-								alt='Belgium Waffle'
-								height={200}
-								width={200}
-							/>
-							<span>
-								Belgium Waffle
-								<BsArrowRight className={styles.arrowRight} />
-							</span>
-						</div>
-						<div className={styles.categoryItem}>
-							<Image
-								className={styles.categoryImage}
-								src={ToasterWaffles}
-								alt='Belgium Waffle'
-								height={200}
-								width={200}
-							/>
-							<span>
-								Toaster Waffle
-								<BsArrowRight className={styles.arrowRight} />
-							</span>
-						</div>
-						<div className={styles.categoryItem}>
-							<Image
-								className={styles.categoryImage}
-								src={CinnamonRollWaffle}
-								alt='Belgium Waffle'
-								height={200}
-								width={200}
-							/>
-							<span>
-								Cinnamon Roll Waffles
-								<BsArrowRight className={styles.arrowRight} />
-							</span>
-						</div>
-						<div className={styles.categoryItem}>
-							<Image
-								className={styles.categoryImage}
-								src={PotatoWaffle}
-								alt='Belgium Waffle'
-								height={200}
-								width={200}
-							/>
-							<span>
-								Sweet Potato Waffles
-								<BsArrowRight className={styles.arrowRight} />
-							</span>
-						</div>
+						<Link href='waffles/Belgian_Waffle' passHref>
+							<div className={styles.categoryItem}>
+								<Image
+									className={styles.categoryImage}
+									src={BelgianWaffles}
+									alt='Belgium Waffle'
+									height={200}
+									width={200}
+								/>
+								<span>
+									Belgium Waffle
+									<BsArrowRight className={styles.arrowRight} />
+								</span>
+							</div>
+						</Link>
+						<Link href='waffles/Toaster_Waffle' passHref>
+							<div className={styles.categoryItem}>
+								<Image
+									className={styles.categoryImage}
+									src={ToasterWaffles}
+									alt='Toaster_Waffles'
+									height={200}
+									width={200}
+								/>
+								<span>
+									Toaster Waffle
+									<BsArrowRight className={styles.arrowRight} />
+								</span>
+							</div>
+						</Link>
+						<Link href='waffles/Cinnamon_Roll_Waffle' passHref>
+							<div className={styles.categoryItem}>
+								<Image
+									className={styles.categoryImage}
+									src={CinnamonRollWaffle}
+									alt='CinnamonRollWaffle'
+									height={200}
+									width={200}
+								/>
+								<span>
+									Cinnamon Roll Waffles
+									<BsArrowRight className={styles.arrowRight} />
+								</span>
+							</div>
+						</Link>
+						<Link href='waffles/Potato_Waffles' passHref>
+							<div className={styles.categoryItem}>
+								<Image
+									className={styles.categoryImage}
+									src={PotatoWaffle}
+									alt='Potato Waffle'
+									height={200}
+									width={200}
+								/>
+								<span>
+									Potato Waffles
+									<BsArrowRight className={styles.arrowRight} />
+								</span>
+							</div>
+						</Link>
 					</div>
 				</div>
 				<div className={styles.testimonialSection}>
