@@ -6,3 +6,5 @@ let url =
 export const getTopWaffles = url + 'api/getTopWaffles';
 export const checkout = url + 'api/checkout';
 export const search = url + 'api/search/';
+export const getWaffleDetail = url + 'api/getWaffleDetail/';
+export const getAllWaffles = url + 'api/getAllWaffles/';

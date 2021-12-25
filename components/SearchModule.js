@@ -1,5 +1,6 @@
 import { BsChevronRight } from 'react-icons/bs';
 import Image from 'next/image';
+import Link from 'next/link';
 import { search } from '../server/api';
 import styles from '../styles/Nav.module.css';
 import { useState } from 'react';
@@ -28,16 +29,21 @@ const SearchModule = () => {
 					{searchResults !== null &&
 						searchResults.map((item, index) => {
 							return (
-								<li key={index} className={styles.searchResultItem}>
-									<Image
-										className={styles.searchResultImage}
-										src={item.image_url}
-										alt={item.name}
-										height={80}
-										width={80}
-									/>
-									<span className={styles.SearchText}>{item.name}</span>
-								</li>
+								<Link
+									key={index}
+									href={`/waffles/${item.name.split(' ').join('_')}`}
+									passHref>
+									<li className={styles.searchResultItem}>
+										<Image
+											className={styles.searchResultImage}
+											src={item.image_url}
+											alt={item.name}
+											height={80}
+											width={80}
+										/>
+										<span className={styles.SearchText}>{item.name}</span>
+									</li>
+								</Link>
 							);
 						})}
 					{searchResults !== null && searchResults.length === 0 && (

@@ -1,0 +1,53 @@
+.Waffle {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 20px;
+}
+
+.waffleImage {
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.WaffleBreif {
+	padding: 0px 40px 40px 40px;
+}
+
+.waffleDescription {
+	padding: 0px 40px 40px 40px;
+}
+
+.waffleDescription h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.Waffle div {
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.AddToCart {
+	background-color: #555;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-end;
+	cursor: pointer;
+}
+
+.AddToCartIcon {
+	margin-left: 10px;
+}
+
+.CheckIcon {
+	margin-left: 10px;
+}
