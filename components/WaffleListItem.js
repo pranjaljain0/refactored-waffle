@@ -40,7 +40,7 @@ const WaffleListItem = ({ item }) => {
 			/>
 			<div>
 				<span>{item.name}</span>
-				<Link href={item.name.split(' ').join('_')} passHref>
+				<Link href={`waffles/${item.name.split(' ').join('_')}`} passHref>
 					<a className={styles.MoreInfoButton}>
 						<span>
 							More Info <BsArrowRight className={styles.arrowRight} />
