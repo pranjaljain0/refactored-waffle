@@ -1,3 +1,5 @@
+import { fetchTopWaffle } from '../../server/Queries';
+
 const { MongoClient } = require('mongodb');
 
 const handler = async (req, res) => {
@@ -20,7 +22,7 @@ const handler = async (req, res) => {
 			client
 				.db('Waffles')
 				.collection('AllWaffles')
-				.find({})
+				.aggregate(fetchTopWaffle())
 				.toArray((err, results) => {
 					err && res.status(400).json(err);
 					res.status(200).json(results);

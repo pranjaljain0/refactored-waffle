@@ -3,6 +3,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../public/logo.png';
+import SearchModule from './SearchModule';
 import styles from '../styles/Nav.module.css';
 
 const Nav = ({ showCart, setShowCart }) => {
@@ -23,14 +24,7 @@ const Nav = ({ showCart, setShowCart }) => {
 					<Link href='/contact'>Contact us</Link>
 				</li>
 			</ul>
-			<ul className={styles.midSection}>
-				<li>
-					<div className={styles.searchInput}>
-						<input type='search' placeholder='Search' />
-						<BsChevronRight className={styles.searchInputIcon} />
-					</div>
-				</li>
-			</ul>
+			<SearchModule />
 			<ul className={styles.rightSection}>
 				<li>
 					<FiShoppingCart

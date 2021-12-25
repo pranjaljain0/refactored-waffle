@@ -1,3 +1,5 @@
+import { SearchWaffle } from '../../../server/Queries';
+
 const { MongoClient } = require('mongodb');
 const assert = require('assert');
 
@@ -12,23 +14,6 @@ export default async function handler(req, res) {
 	if (!process.env.DATABASE)
 		throw new Error('Missing environment variable DATABASE');
 
-	const agg = [
-		{
-			$search: {
-				index: 'WaffleName',
-				text: {
-					query: searchStr,
-					path: {
-						wildcard: '*',
-					},
-				},
-			},
-		},
-		{
-			$limit: 5,
-		},
-	];
-
 	const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTURE}.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
 	MongoClient.connect(uri, {
 		useNewUrlParser: true,
@@ -38,7 +23,7 @@ export default async function handler(req, res) {
 			client
 				.db('Waffles')
 				.collection('AllWaffles')
-				.aggregate(agg)
+				.aggregate(SearchWaffle(searchStr))
 				.toArray((err, results) => {
 					err && res.status(400).json(err);
 					res.status(200).json(results);
