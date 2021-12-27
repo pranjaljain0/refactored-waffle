@@ -15,9 +15,9 @@ const index = () => {
 		setContactFormData({ ...contactFormData, [name]: val });
 	};
 
-	const onSubmitHandler = (e) => {
+	const onSubmitHandler = async (e) => {
 		e.preventDefault();
-		const res = fetch(setContactValue, {
+		const res = await fetch(setContactValue, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

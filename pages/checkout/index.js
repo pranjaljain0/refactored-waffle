@@ -9,16 +9,18 @@ import styles from '../../styles/checkout.module.css';
 const index = () => {
 	const { cartState, setCartState } = useContext(cartContext);
 	const [postData, setPostData] = useState({});
+	const [checkoutState, setCheckoutState] = useState(null);
 
-	const onSubmitHandler = (e) => {
+	const onSubmitHandler = async (e) => {
 		e.preventDefault();
-		fetch(checkout, {
+		const res = await fetch(checkout, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({ userData: postData, cartData: cartState }),
 		});
+		res.status(200) ? setCheckoutState(true) : setCheckoutState(false);
 	};
 
 	const onChangeHandler = (e) => {
@@ -95,6 +97,16 @@ const index = () => {
 							onChange={onChangeHandler}
 						/>
 						<input type='submit' value='Checkout' />
+						{checkoutState !== null && checkoutState === true && (
+							<div className={styles.checkoutStatus}>
+								<span>Checkout succesful</span>
+							</div>
+						)}
+						{checkoutState !== null && checkoutState === false && (
+							<div className={styles.checkoutStatus}>
+								<span>Checkout failed</span>
+							</div>
+						)}
 					</form>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectID } = require('mongodb');
 
 export default async function handler(req, res) {
 	if (req.method !== 'POST') {
@@ -17,16 +17,17 @@ export default async function handler(req, res) {
 
 	const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTURE}.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
 	const client = new MongoClient(uri);
-
+	let hexID = null;
 	try {
 		await client.connect();
 		const database = client.db('Waffles');
 		const collection = database.collection('Orders');
-
-		const result = await collection.insertOne(body);
-		console.log(`A document was inserted with the _id: ${result.insertedId}`);
+		const result = await collection.insertOne(body).then((e) => {
+			hexID = e.insertedId.toHexString();
+		});
 	} catch (err) {
-		console.log(`❗ checkout.js:28 'err'`, err);
+		res.redirect('/404');
+		console.log(err);
 	} finally {
 		await client.close();
 	}

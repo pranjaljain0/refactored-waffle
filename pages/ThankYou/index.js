@@ -1,9 +1,11 @@
 const index = () => {
-	return (
-		<div>
-			<h1>Thank you</h1>
-		</div>
-	);
+	let checkoutHexID = null;
+	if (typeof window !== 'undefined') {
+		checkoutHexID = localStorage.getItem('checkoutHexID');
+	}
+	console.log(checkoutHexID);
+
+	return <div></div>;
 };
 
 export default index;
