@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 
 import CartItem from '../../components/Cart/CartItem';
 import { cartContext } from '../../context/state';
+import { checkout } from '../../server/api';
 import styles from '../../styles/checkout.module.css';
 
 const index = () => {
@@ -11,7 +12,7 @@ const index = () => {
 
 	const onSubmitHandler = (e) => {
 		e.preventDefault();
-		fetch('/api/checkout', {
+		fetch(checkout, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
