@@ -51,3 +51,9 @@
 .CheckIcon {
 	margin-left: 10px;
 }
+
+@media only screen and (max-width: 480px) {
+	.Waffle {
+		flex-direction: column;
+	}
+}

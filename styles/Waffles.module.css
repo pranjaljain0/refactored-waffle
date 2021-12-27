@@ -52,6 +52,10 @@
 	cursor: pointer;
 }
 
+.addToCartButton span {
+	margin-left: 4px;
+}
+
 .arrowRight {
 	margin-left: 10px;
 }
@@ -85,4 +89,10 @@
 	margin: 10px 0;
 	font-size: 0.8rem;
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+	.WaffleList {
+		grid-template-columns: 350px;
+	}
 }

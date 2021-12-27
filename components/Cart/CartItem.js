@@ -3,7 +3,7 @@ import { MdAdd, MdRemove } from 'react-icons/md';
 import Image from 'next/image';
 import styles from '../../styles/Cart.module.css';
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, AddCartItem, RemoveCartItem }) => {
 	return (
 		<div className={styles.CartItem}>
 			<Image
@@ -15,7 +15,7 @@ const CartItem = ({ item }) => {
 			/>
 			<div className={styles.CartItemDetails}>
 				<span>{item.name}</span>
-				<span>{item.price}</span>
+				<span>${item.price}</span>
 				<div className={styles.QtyIconsContainer}>
 					<MdRemove
 						onClick={() => RemoveCartItem(item)}

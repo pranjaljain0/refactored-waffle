@@ -89,3 +89,9 @@
 	color: #d8000c;
 	background-color: #ffbaba;
 }
+
+@media only screen and (max-width: 480px) {
+	.contactForm {
+		width: 90%;
+	}
+}

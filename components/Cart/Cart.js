@@ -51,7 +51,12 @@ const Cart = ({ showCart, setShowCart }) => {
 							return 0;
 						})
 						.map((item, index) => (
-							<CartItem item={item} key={index} />
+							<CartItem
+								item={item}
+								key={index}
+								AddCartItem={AddCartItem}
+								RemoveCartItem={RemoveCartItem}
+							/>
 						))}
 				</div>
 			) : (

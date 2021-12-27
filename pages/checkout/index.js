@@ -40,20 +40,45 @@ const index = () => {
 		return (total * 7.5) / 100;
 	};
 
+	const AddCartItem = (item) => {
+		let ix = null;
+		cartState.forEach((foritem, index) => {
+			if (foritem._id === item._id) ix = index;
+		});
+		if (cartState[ix].qty < 9) cartState[ix].qty = cartState[ix].qty + 1;
+		setCartState([...cartState]);
+	};
+
+	const RemoveCartItem = (item) => {
+		let ix = null;
+		cartState.forEach((foritem, index) => {
+			if (foritem._id === item._id) ix = index;
+		});
+		if (cartState[ix].qty > 1) cartState[ix].qty = cartState[ix].qty - 1;
+		else cartState.splice(ix, 1);
+		setCartState([...cartState]);
+	};
+
 	return (
 		<div className={styles.checkoutContainer}>
 			<h1>Checkout</h1>
 			<div className={styles.formContainer}>
 				<div className={styles.leftContainer}>
 					{cartState.map((item, index) => {
-						return <CartItem key={index} item={item} />;
+						return (
+							<CartItem
+								key={index}
+								AddCartItem={AddCartItem}
+								RemoveCartItem={RemoveCartItem}
+								item={item}
+							/>
+						);
 					})}
 					<div className={styles.totalPrice}>
-						<span>Price total: {countTotal().toFixed(2)}</span>
-						<span>Added Tax(7.5%): {countTax().toFixed(2)}</span>
+						<span>Price total: ${countTotal().toFixed(2)}</span>
+						<span>Added Tax(7.5%): ${countTax().toFixed(2)}</span>
 						<span>
-							Total (with tax):{' '}
-							{+countTotal().toFixed(2) + +countTax().toFixed(2)}
+							Total (with tax): ${(+countTotal() + +countTax()).toFixed(2)}
 						</span>
 					</div>
 				</div>
