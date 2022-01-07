@@ -1,4 +1,5 @@
 import { BsChevronRight } from 'react-icons/bs';
+import CartIcon from './Cart/CartIcon';
 import { FiShoppingCart } from 'react-icons/fi';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -27,10 +28,7 @@ const Nav = ({ showCart, setShowCart }) => {
 			<SearchModule />
 			<ul className={styles.rightSection}>
 				<li>
-					<FiShoppingCart
-						className={styles.CartIcon}
-						onClick={() => setShowCart(!showCart)}
-					/>
+					<CartIcon showCart={showCart} setShowCart={setShowCart} />
 				</li>
 			</ul>
 		</div>

@@ -1,0 +1,23 @@
+.cartIconHolder {
+	display: inline-block;
+}
+
+.CartIcon {
+	font-size: 1.5rem;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+
+.cartItemCount {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	font-size: 0.9em;
+	background-color: #ff6961;
+	border-radius: 50% 50%;
+	height: 21px;
+	width: 21px;
+	text-align: center;
+}
